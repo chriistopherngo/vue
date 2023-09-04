@@ -8,15 +8,16 @@
 </head>
 <body>
     <div id="content" class="container">
-        <h1>Vue basics</h1>
-        <p>Hello world</p>
+        <h1>{{ pageTitle }}</h1>
+        <p>{{ content }}</p>
     </div>
 
     <script>
         Vue.createApp({
             data(){
                 return {
-                    
+                    pageTitle: 'Vue basics',
+                    content: 'Hello world'
                 }
             }
         }).mount('#content');
