@@ -7,12 +7,27 @@
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </head>
 <body>
+
+    <nav>
+        <ul>
+            <li v-for="link in links">{{ link }}</li>
+        </ul>
+    </nav>
+
     <div id="content" class="container">
         <h1>{{ pageTitle }}</h1>
         <p>{{ content }}</p>
     </div>
 
     <script>
+        Vue.createApp({
+            data(){
+                return {
+                    links: ['Home', 'About', 'Contact', 'hello']
+                }
+            }
+        }).mount('nav');
+
         Vue.createApp({
             data(){
                 return {
